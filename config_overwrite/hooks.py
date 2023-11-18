@@ -135,6 +135,7 @@ app_license = "mit"
 
 scheduler_events = {
   "cron": {
+    # Pull emails every minute
 		"0/1 * * * *": [
 			"frappe.email.doctype.email_account.email_account.pull",
 		],
