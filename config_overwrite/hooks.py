@@ -133,6 +133,30 @@ app_license = "mit"
 # Scheduled Tasks
 # ---------------
 
+scheduler_events = {
+  "cron": {
+		"0/1 * * * *": [
+			"frappe.email.doctype.email_account.email_account.pull",
+		],
+	},
+  
+	# "all": [
+	# 	"config_overwrite.tasks.all"
+	# ],
+	# "daily": [
+	# 	"config_overwrite.tasks.daily"
+	# ],
+	# "hourly": [
+	# 	"config_overwrite.tasks.hourly"
+	# ],
+	# "weekly": [
+	# 	"config_overwrite.tasks.weekly"
+	# ],
+	# "monthly": [
+	# 	"config_overwrite.tasks.monthly"
+	# ],
+}
+
 # scheduler_events = {
 #	"all": [
 #		"config_overwrite.tasks.all"
